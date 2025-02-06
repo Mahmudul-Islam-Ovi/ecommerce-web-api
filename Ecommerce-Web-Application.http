@@ -1,6 +1,35 @@
-@Ecommerce_Web_Application_HostAddress = http://localhost:5105
 
-GET {{Ecommerce_Web_Application_HostAddress}}/weatherforecast/
-Accept: application/json
+GET http://localhost:5105
 
 ###
+
+GET http://localhost:5105/api/categories
+
+###
+
+GET http://localhost:5105/api/categories?searchValue=PEN
+
+###
+
+POST http://localhost:5105/api/categories
+Content-Type: application/json
+
+{
+    "name":"mobile",
+    "description":"Test Description 2"
+}
+
+###
+
+DELETE http://localhost:5105/api/categories/f2881259-4f14-4006-8cbb-5e0935b8f633
+
+###
+
+PUT  http://localhost:5105/api/categories/f09e0914-5e98-400d-92ab-4675056bbeb0
+Content-Type: application/json
+
+{
+    "name":"",
+    "description":"Test Description update again"
+}
+
